@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+    <style>
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        /* Element selectors */
+        h1 {
+            color: #ff6b6b;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Class selectors */
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+
+        }
+        
+        p1 {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-style: italic;
+
+        }
+
+        
+        /* Named colors */
+         p1 {
+         background-color: lightblue;
+         color: darkblue;
+         border: 2px solid navy;
+         padding: 15px;
+         margin: 10px 0;
+         border-radius: 5px;
+
+         } 
+
+        p2 {
+            color: #333;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 15px;
+
+        }
+
+        /* Transparent and currentColor */
+        p2 {
+         background-color: transparent;
+         color: #ff6b6b;
+         border: 2px solid currentColor;
+         padding: 15px;
+         margin: 10px 0;
+         border-radius: 5px;
+         
+        }
+
+        p3 {
+            color: #333;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 15px;
+             font-weight: bold; 
+
+        }
+
+        p3{
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24, #333);
+        color: white;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        }
+
+
+        p4 {
+            color:#333;
+            line-height: 1.6;
+            font-style: italic;
+           
+        } 
+
+        p4 {
+        background: linear-gradient(180deg, #ff6b6b, #ee5a24, #333);
+        color: white;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        }
+
+        p5 {
+            color:#333;
+            line-height: 1.6;
+            font-style: italic;
+           
+        } 
+
+        p5 {
+            border-top: 3px solid red;
+            border-right: 3px dotted green;
+            border-bottom: 3px dashed blue;
+            border-left: 3px double purple;
+            padding : 10px;
+        }
+
+        
+        .button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        .button:hover {
+            background-color: #ee5a24;
+        }
+
+        /* ID selector */
+        #main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            border: 6px double white;
+            border-radius: 5px;
+
+        }
+
+        /* Descendant selector */
+        div p {
+            font-style: italic;
+        }
+     
+        /* Adjacent sibling selector */
+        h2 + p {
+            color: #ee5a24;
+        }
+
+        /* Attribute selector */
+        input[type="text"] {
+            
+            width: 90%;  
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Pseudo-class selectors */
+        .button {
+            transform: translateY(2px);
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="main-content">
+        <h1>CSS Selectors Example</h1>
+
+             <div class="container">
+
+            <p>This is a paragraph with <span class="highlight">highlighted text</span>.</p>
+            
+            <div>
+                <p1>This paragraph is inside a div and will be italic.</p1>
+            </div><br><br>
+
+            <div>
+                <p2>This paragraph is also inside a div and will be italic.</p2>
+            </div><br><br>
+            <div>
+                <p3>This paragraph is a direct child of .container and will be bold.</p3>
+            </div><br><br>
+            <div>
+                <p4>This paragraph is not a direct child and will not be bold</p4>
+            </div><br><br>
+            <div>
+                <p5>This paragraph is not a direct child and will not be bold</p5>
+            </div>
+        </div> <br>
+        
+            <h2>Subheading</h2>
+        <p>This paragraph comes directly after h2 and will be orange.</p>
+
+         <div>
+            <p>This paragraph does not come directly after h2.</p>
+         </div>
+       <form>
+            <input type="text" id="name" placeholder="Text input with attribute selector">
+            <input type="email" id="email" placeholder="Email input">
+            <button class="button" type="button">Normal Button</button>
+            <button class="button" type="button">Another Button</button>
+        </form>
+
+        <table width="100%" cellpadding="10" cellspacing="0" border="0">
+            <tr>
+                <td>Row 1</td>
+            </tr>
+            <tr>
+                <td>Row 2</td>
+            </tr>
+            <tr>
+                <td>Row 3</td>
+            </tr>
+            <tr>
+                <td>Row 4</td>
+            </tr>
+        </table>
+        <div>
+            <p><em>This is a quoted text with special styling before and after.</em></p>
+        </div>
+    </div>
+</body>
+</html>
