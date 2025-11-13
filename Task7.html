@@ -6,23 +6,39 @@
     <title>CSS Selectors Example</title>
     <style>
 
+
         body {
             background-color: #f0f0f0;
         }
 
-        /* Element selectors */
+        #main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            border: 6px double white;
+            border-radius: 5px;
+
+        }
+
+    
         h1 {
             color: #ff6b6b;
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Class selectors */
+
         .highlight {
             background-color: #ffeb3b;
             padding: 2px 5px;
             border-radius: 3px;
         }
+
+
+        
 
         p {
             color: #333;
@@ -138,19 +154,6 @@
             background-color: #ee5a24;
         }
 
-        /* ID selector */
-        #main-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 50px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-            border: 6px double white;
-            border-radius: 5px;
-
-        }
-
         /* Descendant selector */
         div p {
             font-style: italic;
@@ -171,15 +174,30 @@
             margin-bottom: 10px;
         }
 
-        /* Pseudo-class selectors */
-        .button {
-            transform: translateY(2px);
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table {
+
+            width : 80;
+            margin :20px auto;
+
+        }
+
+        td, tr { 
+            width : 200px;
+            border : 5px solid #f9f9f9;
+            padding : 5px;
+            text-align : center;
+
         }
 
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
 
+        p::after { content: " ←"; color: red; }
         
     </style>
 </head>
@@ -222,8 +240,8 @@
             <button class="button" type="button">Another Button</button>
         </form>
 
-        <table width="100%" cellpadding="10" cellspacing="0" border="0">
-            <tr>
+        <table>
+                        <tr>
                 <td>Row 1</td>
             </tr>
             <tr>
